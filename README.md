@@ -1,81 +1,177 @@
-Project Title
+# 💰 YISAKAL Saving and Credit Cooperative Organization Database Management System
 
-YISAKAL Saving and Credit Cooperative Organization Database Management System
+---
 
-Group Members
-Full Name	           ID Number
-Anael Mulugeta	     ETS0176/17
-Betelhem Hailu	     ETS0298/17
-Betelhem Sefiw	    ETS0285/17
-Bontu Bekele	      ETS0361/17
-Daniel Alemu	      ETS0406/17
-Dilayehu Dessalegn 	ETS0445/17
+## 📖 Project Overview
 
-Description
-The YISAKAL SACCO Database Management System is a hybrid database project developed for the hypothetical YISAKAL Saving and Credit Cooperative Organization (YISAKAL SACCO). The system is designed to improve the management of member information, savings, loans, repayments, and reporting activities.
-The project integrates both relational and NoSQL database technologies to overcome the limitations of traditional database systems. MySQL is used for structured transactional data such as member registration, savings accounts, loan applications, and repayment records, while MongoDB is used for semi-structured and high-volume data including audit logs, notifications, repayment incidents, and document-like records.
+The **YISAKAL SACCO Database Management System** is a hybrid database project developed for the hypothetical **YISAKAL Saving and Credit Cooperative Organization (YISAKAL SACCO)**.
+
+The system is designed to improve the management of:
+
+- Member information
+- Savings accounts
+- Loan processing
+- Repayment tracking
+- Reporting activities
+
+This project integrates both **Relational** and **NoSQL** database technologies to overcome the limitations of traditional database systems.
+
+- **MySQL** is used for structured transactional data such as:
+  - Member registration
+  - Savings accounts
+  - Loan applications
+  - Repayment records
+
+- **MongoDB** is used for semi-structured and high-volume data such as:
+  - Audit logs
+  - Notifications
+  - Repayment incidents
+  - Document-like records
+
+---
+
+# 🎯 Project Objectives
 
 The system aims to:
-Improve data consistency and integrity
-Reduce duplication and manual data handling
-Support scalable and flexible data storage
-Enhance reporting and decision-making processes
-Provide efficient management of SACCO operations
 
-Technologies Used
--MySQL
--MongoDB
--MySQL Workbench
--MongoDB Compass
--JavaScript
--JSON
--GitHub
--draw.io
+- ✅ Improve data consistency and integrity
+- ✅ Reduce duplication and manual data handling
+- ✅ Support scalable and flexible data storage
+- ✅ Enhance reporting and decision-making processes
+- ✅ Provide efficient management of SACCO operations
 
-How to Run the Project
-Prerequisites
+---
+
+# 👥 Group Members
+
+| Full Name | ID Number |
+|------------|------------|
+| **Anael Mulugeta** | ETS0176/17 |
+| **Betelhem Hailu** | ETS0298/17 |
+| **Betelhem Sefiw** | ETS0285/17 |
+| **Bontu Bekele** | ETS0361/17 |
+| **Daniel Alemu** | ETS0406/17 |
+| **Dilayehu Dessalegn** | ETS0445/17 |
+
+---
+
+# 🛠️ Technologies Used
+
+The following technologies and tools were used in this project:
+
+- **MySQL**
+- **MongoDB**
+- **MySQL Workbench**
+- **MongoDB Compass**
+- **JavaScript**
+- **JSON**
+- **GitHub**
+- **draw.io**
+
+---
+
+# ⚙️ How to Run the Project
+
+## 📌 Prerequisites
+
 Before running the project, make sure the following tools are installed:
--MySQL Community Server
+
+- MySQL Community Server
 - MongoDB Community Edition
 - MySQL Workbench
 - MongoDB Compass
 
-Steps to run
-  1. Clone the Repository
+---
+
+# 🚀 Steps to Run the Project
+
+## 1️⃣ Clone the Repository
+
+```bash
 git clone <repository-link>
+```
 
-2. Open the Project
-Navigate into the project folder:
+---
+
+## 2️⃣ Open the Project Folder
+
+Navigate into the project directory:
+
+```bash
 cd YISAKAL-SACCO-DBMS
+```
 
-4. Setup MySQL Database
-Open MySQL Workbench
-Create a new database
-Import or run the provided SQL scripts
-Execute the schema and table creation scripts
+---
 
-Example:
+## 3️⃣ Setup MySQL Database
 
+### Open MySQL Workbench and:
+
+- Create a new database
+- Import or run the provided SQL scripts
+- Execute the schema and table creation scripts
+
+### Example:
+
+```sql
 CREATE DATABASE yisakal_sacco;
 USE yisakal_sacco;
-4. Setup MongoDB Collections
-Open MongoDB Compass or Mongo Shell
-Create a database named:
-yisakal_sacco
-Import the provided JSON collections or create collections manually
+```
 
-5. Run Queries and Test the System
-Execute SQL queries for transactional operations
-Execute MongoDB queries for logs and document-based records
-Test member registration, loan processing, savings transactions, and reporting functionalities
-Project Scope
+---
+
+## 4️⃣ Setup MongoDB Collections
+
+### Open MongoDB Compass or Mongo Shell and:
+
+- Create a database named:
+
+```bash
+yisakal_sacco
+```
+
+- Import the provided JSON collections
+  **OR**
+- Create collections manually
+
+---
+
+## 5️⃣ Run Queries and Test the System
+
+Execute:
+
+- SQL queries for transactional operations
+- MongoDB queries for logs and document-based records
+
+Test functionalities such as:
+
+- Member registration
+- Loan processing
+- Savings transactions
+- Reporting features
+
+---
+
+# 📂 Project Scope
 
 The project covers:
-Member Management
-Savings Management
-Loan Management
-Repayment Tracking
-Basic Reporting
-Audit and Log Management
 
-This project is developed for educational and academic purposes only.
+- 👤 Member Management
+- 💵 Savings Management
+- 🏦 Loan Management
+- 📅 Repayment Tracking
+- 📊 Basic Reporting
+- 📝 Audit and Log Management
+
+---
+
+# 📌 Notes
+
+This project is developed for **educational and academic purposes only**.
+
+---
+
+# ⭐ Contributors
+
+Special thanks to all group members for their collaboration and contribution to the successful completion of this project.
+
