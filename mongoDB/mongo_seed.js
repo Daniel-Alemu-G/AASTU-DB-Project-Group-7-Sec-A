@@ -3,6 +3,24 @@
 
 use("Yisakal_SACCO");
 
+// Clear existing data to make the seed script idempotent and prevent duplicate key errors
+db.Branch.deleteMany({});
+db.Employee.deleteMany({});
+db.Member.deleteMany({});
+db.SavingAccountProduct.deleteMany({});
+db.LoanProduct.deleteMany({});
+db.SavingAccount.deleteMany({});
+db.Loan.deleteMany({});
+db.LoanSchedule.deleteMany({});
+db.SavingsTransaction.deleteMany({});
+db.LoanTransaction.deleteMany({});
+db.Guaranty.deleteMany({});
+db.Collateral.deleteMany({});
+db.Audit.deleteMany({});
+db.FeeType.deleteMany({});
+db.FeeEvent.deleteMany({});
+db.FeeTransaction.deleteMany({});
+
 // Branches
 db.Branch.insertMany([
   { _id: "Branch-1", name: "Merkato Branch", address: { region: "Addis Ababa", city: "Addis Ababa", subcity: "Addis Ketema", kebele: "05", street: "Merkato Ave" }, phone_number: "0111234567", created_date: new Date("2020-01-15"), status: "Active" },
