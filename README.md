@@ -1,32 +1,21 @@
-# 💰 YISAKAL Saving and Credit Cooperative Organization Database Management System
+# Project Title: 💰 YISAKAL Saving and Credit Cooperative Organization Database Management System
 
 ---
 
-## 📖 Project Overview
+## 📖 Project Description
 
-The **YISAKAL SACCO Database Management System** is a hybrid database project developed for the hypothetical **YISAKAL Saving and Credit Cooperative Organization (YISAKAL SACCO)**.
+The **YISAKAL SACCO Database Management System** is a **hybrid database project** developed for the hypothetical **YISAKAL Saving and Credit Cooperative Organization (YISAKAL SACCO)**.  
 
 The system is designed to improve the management of:
-
 - Member information
-- Savings accounts
-- Loan processing
-- Repayment tracking
+- Savings
+- Loans
+- Repayments
 - Reporting activities
 
-This project integrates both **Relational** and **NoSQL** database technologies to overcome the limitations of traditional database systems.
+The project integrates both **Relational** and **NoSQL** database technologies to overcome the limitations of traditional database systems.  
 
-- **MySQL** is used for structured transactional data such as:
-  - Member registration
-  - Savings accounts
-  - Loan applications
-  - Repayment records
-
-- **MongoDB** is used for semi-structured and high-volume data such as:
-  - Audit logs
-  - Notifications
-  - Repayment incidents
-  - Document-like records
+We have applied the proposed database into both **Relational** and **NoSQL** databases, which are corresponding/analogous to each other.
 
 ---
 
@@ -171,7 +160,4 @@ This project is developed for **educational and academic purposes only**.
 
 ---
 
-# ⭐ Contributors
-
-Special thanks to all group members for their collaboration and contribution to the successful completion of this project.
 
