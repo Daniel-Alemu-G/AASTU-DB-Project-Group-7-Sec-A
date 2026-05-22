@@ -68,8 +68,6 @@ Before running the project, make sure the following tools are installed:
 - MySQL Community Server
 - MongoDB Community Edition
 - MySQL Workbench
-- MongoDB Compass
-
 ---
 
 # 🚀 Steps to Run the Project
@@ -87,7 +85,7 @@ git clone https://github.com/Daniel-Alemu-G/AASTU-DB-Project-Group-7-Sec-A.git
 Navigate into the project directory:
 
 ```bash
-cd YISAKAL-SACCO-DBMS
+cd AASTU-DB-Project-Group-7-Sec-A
 ```
 
 ---
