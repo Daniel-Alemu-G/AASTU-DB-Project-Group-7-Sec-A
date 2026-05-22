@@ -27,7 +27,7 @@ role enum('Admin', 'Manager', 'Officer', 'Teller') NOT NULL,
 hire_date date DEFAULT (CURRENT_DATE),
 status enum('Active', 'Inactive', 'Terminated') DEFAULT 'Active',
 FOREIGN KEY (branch_id)
-REFERENCES Branch(branch_id)
+REFERENCES Branch(branch_id) ON DELETE SET NULL
 );
 
 CREATE TABLE Member (
@@ -53,7 +53,7 @@ credit_score int,
 membership_date date DEFAULT (CURRENT_DATE),
 status enum('Active', 'Inactive', 'Suspended') DEFAULT 'Active',
 FOREIGN KEY (branch_id)
-REFERENCES Branch(branch_id),
+REFERENCES Branch(branch_id) ON DELETE SET NULL,
 UNIQUE KEY UK_national_id (national_id_number),
 UNIQUE KEY UK_kebele_id (kebele_id_number)
 );
@@ -93,11 +93,11 @@ current_balance decimal(18,2) DEFAULT 0.00,
 open_date date DEFAULT (CURRENT_DATE),
 status enum('Active', 'Inactive', 'Closed') DEFAULT 'Active',
 FOREIGN KEY (product_id)
-REFERENCES SavingAccountProduct(product_id),
+REFERENCES SavingAccountProduct(product_id) ON DELETE RESTRICT,
 FOREIGN KEY (member_id)
-REFERENCES Member(member_id),
+REFERENCES Member(member_id) ON DELETE RESTRICT,
 FOREIGN KEY (branch_id)
-REFERENCES Branch(branch_id)
+REFERENCES Branch(branch_id) ON DELETE SET NULL
 );
 
 CREATE TABLE Loan (
@@ -115,11 +115,11 @@ outstanding_interest decimal(18,2),
 outstanding_fees decimal(18,2),
 status enum('Applied', 'Approved', 'Disbursed', 'Active', 'Closed', 'Defaulted') DEFAULT 'Applied',
 FOREIGN KEY (member_id)
-REFERENCES Member(member_id),
+REFERENCES Member(member_id) ON DELETE RESTRICT,
 FOREIGN KEY (loan_officer_id)
-REFERENCES Employee(employee_id),
+REFERENCES Employee(employee_id) ON DELETE SET NULL,
 FOREIGN KEY (product_id)
-REFERENCES LoanProduct(product_id)
+REFERENCES LoanProduct(product_id) ON DELETE RESTRICT
 );
 CREATE TABLE LoanSchedule (
 schedule_id int PRIMARY KEY AUTO_INCREMENT,
@@ -134,7 +134,7 @@ interest_paid decimal(18,2) DEFAULT 0.00,
 fees_paid decimal(18,2) DEFAULT 0.00,
 status enum('Pending', 'Paid', 'Partial', 'Overdue') DEFAULT 'Pending',
 FOREIGN KEY (loan_id)
-REFERENCES Loan(loan_id)
+REFERENCES Loan(loan_id) ON DELETE CASCADE
 );
 
 CREATE TABLE SavingsTransaction (
@@ -147,9 +147,9 @@ balance_after_transaction decimal(18,2),
 reference_number varchar(100),
 employee_id int,
 FOREIGN KEY (account_id)
-REFERENCES SavingAccount(account_id),
+REFERENCES SavingAccount(account_id) ON DELETE RESTRICT,
 FOREIGN KEY (employee_id)
-REFERENCES Employee(employee_id)
+REFERENCES Employee(employee_id) ON DELETE SET NULL
 );
 
 CREATE TABLE LoanTransaction (
@@ -164,11 +164,11 @@ reference_number varchar(100),
 employee_id int,
 reversal_status enum('None', 'Reversed', 'Correction') DEFAULT 'None',
 FOREIGN KEY (loan_id)
-REFERENCES Loan(loan_id),
+REFERENCES Loan(loan_id) ON DELETE RESTRICT,
 FOREIGN KEY (employee_id)
-REFERENCES Employee(employee_id),
+REFERENCES Employee(employee_id) ON DELETE SET NULL,
 FOREIGN KEY (loan_schedule_id)
-REFERENCES LoanSchedule(schedule_id)
+REFERENCES LoanSchedule(schedule_id) ON DELETE SET NULL
 );
 
 CREATE TABLE Guaranty (
@@ -178,9 +178,9 @@ guarantee_amount decimal(18,2) NOT NULL,
 status enum('Active', 'Released', 'Claimed') DEFAULT 'Active',
 PRIMARY KEY (loan_id, member_id),
 FOREIGN KEY (loan_id)
-REFERENCES Loan(loan_id),
+REFERENCES Loan(loan_id) ON DELETE CASCADE,
 FOREIGN KEY (member_id)
-REFERENCES Member(member_id)
+REFERENCES Member(member_id) ON DELETE RESTRICT
 );
 
 CREATE TABLE Collateral (
@@ -192,7 +192,7 @@ estimated_value decimal(18,2),
 ownership_document_ref varchar(150),
 status enum('Pledged', 'Released', 'Liquidated') DEFAULT 'Pledged',
 FOREIGN KEY (loan_id)
-REFERENCES Loan(loan_id)
+REFERENCES Loan(loan_id) ON DELETE CASCADE
 );
 
 CREATE TABLE Audit (
@@ -206,7 +206,7 @@ employee_id int,
 created_at datetime DEFAULT CURRENT_TIMESTAMP,
 ip_address varchar(45),
 FOREIGN KEY (employee_id)
-REFERENCES Employee(employee_id)
+REFERENCES Employee(employee_id) ON DELETE SET NULL
 );
 
 CREATE TABLE FeeType (
@@ -225,11 +225,11 @@ loan_id int,
 saving_transaction_id int,
 paid bool DEFAULT false,
 FOREIGN KEY (saving_transaction_id)
-REFERENCES SavingsTransaction(transaction_id),
+REFERENCES SavingsTransaction(transaction_id) ON DELETE SET NULL,
 FOREIGN KEY (fee_type_id)
-REFERENCES FeeType(fee_type_id),
+REFERENCES FeeType(fee_type_id) ON DELETE RESTRICT,
 FOREIGN KEY (loan_id)
-REFERENCES Loan(loan_id)
+REFERENCES Loan(loan_id) ON DELETE SET NULL
 );
 
 CREATE TABLE FeeTransaction (
@@ -239,9 +239,9 @@ amount decimal(18,2) NOT NULL,
 reference varchar(100),
 transaction_date datetime DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY (fee_event_id)
-REFERENCES FeeEvent(fee_event_id)
+REFERENCES FeeEvent(fee_event_id) ON DELETE RESTRICT
 );
 
 ALTER TABLE Branch 
 ADD FOREIGN KEY (manager_id) 
-REFERENCES Employee(employee_id);
+REFERENCES Employee(employee_id) ON DELETE SET NULL;
