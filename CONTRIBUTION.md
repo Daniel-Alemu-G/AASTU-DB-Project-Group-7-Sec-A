@@ -79,6 +79,12 @@ To implement and manage the NoSQL database layer by designing and developing Mon
 - Assisted in database implementation and testing  
 
 
+**Commit Link:**
+- 1. [83ac6dd](https://github.com/Daniel-Alemu-G/AASTU-DB-Project-Group-7-Sec-A/commit/83ac6dd768bf643d083b203207f352cced431f6d)-SchemaSQL
+
+- 2. [9cb242f](https://github.com/Daniel-Alemu-G/AASTU-DB-Project-Group-7-Sec-A/commit/9cb242fb07b0558c6d7abd594474b9fa3fc3a71e)- Seed-DataSQL
+
+
 **Purpose of Contribution:**
 To implement the relational database layer using SQL by creating structured queries and ensuring correct execution of database operations.
 
@@ -90,6 +96,9 @@ To implement the relational database layer using SQL by creating structured quer
 - Prepared project presentation (PPT)  
 - Compiled and formatted final project report (PDF)  
 - Ensured documentation consistency and structure
+
+**Commit Link:**
+- 1. [7c73bc3](https://github.com/Daniel-Alemu-G/AASTU-DB-Project-Group-7-Sec-A/commit/7c73bc36378ec0770711a3c7ad815ba095cdc6ff)-Final Report and Presentation
 
 
 **Purpose of Contribution:**
