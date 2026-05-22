@@ -12,6 +12,12 @@ INSERT INTO Employee (employee_id, branch_id, first_name,middle_name, last_name,
 (103,2,'Dawit','Haile','Serawit','dawit@yisakal.com','0933333333','Teller','2021-01-10','Active'),
 (104,2,'Meron','Alemu','Bereket','meron@yisakal.com','0944444444','Manager','2020-06-05','Active'),
 (105,3,'Yonas','Girma','Mitku','yonas@yisakal.com','0955555555','Officer','2021-04-01','Active');
+-- Link managers to branches
+UPDATE Branch SET manager_id = 101 WHERE branch_id = 1;  
+UPDATE Branch SET manager_id = 104 WHERE branch_id = 2;  
+UPDATE Branch SET manager_id = 105 WHERE branch_id = 3;  
+UPDATE Branch SET manager_id = 103 WHERE branch_id = 4;
+UPDATE Branch SET manager_id = 102 WHERE branch_id = 5;
 -- MEMBER
 INSERT INTO Member (member_id, first_name, middle_name, last_name, branch_id, gender, date_of_birth, national_id_number, kebele_id_number, email, phone_number, region, city, subcity, kebele, street, house_number, occupation, credit_score, membership_date, status) VALUES
 (201,'Tigist','Bekele','Debebe',1,'Female','1990-05-12','NID1001','KID1001','tigist@gmail.com','0966666666','Addis Ababa','Addis Ababa','Addis Ketema','05','Merkato Ave','12A','Trader',720,'2021-01-10','Active'),
@@ -57,9 +63,9 @@ INSERT INTO LoanSchedule (schedule_id,loan_id,installment_number,due_date,princi
 -- SAVINGS TRANSACTION
 INSERT INTO SavingsTransaction (transaction_id,account_id,transaction_type,amount,transaction_date,balance_after_transaction,reference_number,employee_id) VALUES
 (801,501,'Deposit',10000,'2021-01-10 09:00:00',10000,'STX1',103),
-(802,501,'Deposit',15000,'2021-06-15 10:30:00',25000,'STX2',103),
-(803,502,'Deposit',20000,'2021-02-20 11:00:00',20000,'STX3',103),
-(804,502,'Withdrawal',7500,'2022-08-10 14:15:00',12500,'STX4',103),
+(802,501,'Deposit',15000,'2021-06-15 10:30:00',25000,'STX2',101),
+(803,502,'Deposit',20000,'2021-02-20 11:00:00',20000,'STX3',102),
+(804,502,'Withdrawal',7500,'2022-08-10 14:15:00',12500,'STX4',104),
 (805,503,'Deposit',8000,'2021-06-15 09:45:00',8000,'STX5',103);
 -- LOAN TRANSACTION
 INSERT INTO LoanTransaction (transaction_id,loan_id,loan_schedule_id,transaction_type,amount,transaction_date,payment_method,reference_number,employee_id,reversal_status) VALUES
@@ -79,7 +85,6 @@ INSERT INTO Guaranty (loan_id,member_id,guarantee_amount,status) VALUES
 INSERT INTO Collateral (collateral_id,loan_id,collateral_type,description,estimated_value,ownership_document_ref,status) VALUES
 (1101,603,'Vehicle','Toyota Vitz',350000,'DOC1','Pledged'),
 (1102,603,'Property','Land 200sqm',500000,'DOC2','Pledged'),
-(1103,605,'House','Small house',300000,'DOC3','Pledged'),
 (1104,602,'Equipment','Office equipment',50000,'DOC4','Released');
 -- AUDIT
 INSERT INTO Audit (audit_id, entity_name, entity_id, action_type, old_values, new_values, employee_id, created_at, ip_address) VALUES
@@ -104,5 +109,4 @@ INSERT INTO FeeTransaction (fee_transaction_id,fee_event_id,amount,reference,tra
 (1501,1401,1000,'FTX1','2023-01-15 08:10:00'),
 (1502,1403,4000,'FTX2','2024-03-10 08:40:00'),
 (1503,1404,500,'FTX3','2024-01-10 08:20:00');
-
 
