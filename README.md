@@ -110,20 +110,15 @@ USE yisakal_sacco;
 ---
 
 ## 4️⃣ Setup MongoDB Collections
+**Prerequisite**: Install MongoDB community Server
 
-### Open MongoDB Compass or Mongo Shell and:
+- **Step 1**: run `mongosh mongo_schema.js`
+    - This will create the database collections with their validations.
+- **Step 2**: run `mongosh mongo_seed.js`
+    - This will insert the sample/test data into the database
+- **Step 3**: run `mongosh queries.js`
+    - Runs some usefull queries that provide some insight into user statistics and activities
 
-- Create a database named:
-
-```bash
-yisakal_sacco
-```
-
-- Import the provided JSON collections
-  **OR**
-- Create collections manually
-
----
 
 ## 5️⃣ Run Queries and Test the System
 
