@@ -99,6 +99,8 @@ cd AASTU-DB-Project-Group-7-Sec-A
     - This will create the database and tables without the data (empty)
 - **Step 3**: Import and run `seed.sql` 
     - This will add the sample data into the table (INSERT queries)
+- **Step 4** Open queries.sql and **make a selection from the queries** on workbench to run inorder to get analytics/insights from the database
+    - Running the entire file will only reveal the last result. Make a selection before running to get the desired result.
 
 ## 4️⃣ Setup MongoDB Collections
 **Prerequisite**: Install MongoDB community Server
