@@ -99,6 +99,8 @@ To implement the relational database layer using SQL by creating structured quer
 
 **Commit Link:**
 - 1. [7c73bc3](https://github.com/Daniel-Alemu-G/AASTU-DB-Project-Group-7-Sec-A/commit/7c73bc36378ec0770711a3c7ad815ba095cdc6ff)-Final Report and Presentation
+  2. [04edaee
+](https://github.com/Daniel-Alemu-G/AASTU-DB-Project-Group-7-Sec-A/commit/04edaee8ba9c613dcf1b3e694ecfbaccef123bca) - Update the presentation file
 
 
 **Purpose of Contribution:**
