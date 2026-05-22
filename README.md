@@ -77,7 +77,7 @@ Before running the project, make sure the following tools are installed:
 ## 1️⃣ Clone the Repository
 
 ```bash
-git clone <repository-link>
+git clone https://github.com/Daniel-Alemu-G/AASTU-DB-Project-Group-7-Sec-A.git
 ```
 
 ---
@@ -94,20 +94,13 @@ cd YISAKAL-SACCO-DBMS
 
 ## 3️⃣ Setup MySQL Database
 
-### Open MySQL Workbench and:
+**Prerequisite** MySQL community server and MySQL Workbench
 
-- Create a new database
-- Import or run the provided SQL scripts
-- Execute the schema and table creation scripts
-
-### Example:
-
-```sql
-CREATE DATABASE yisakal_sacco;
-USE yisakal_sacco;
-```
-
----
+- **Step 1**: Open workbench
+- **Step 2**: Import and run `schema.sql`
+    - This will create the database and tables without the data (empty)
+- **Step 3**: Import and run `seed.sql` 
+    - This will add the sample data into the table (INSERT queries)
 
 ## 4️⃣ Setup MongoDB Collections
 **Prerequisite**: Install MongoDB community Server
@@ -120,21 +113,6 @@ USE yisakal_sacco;
     - Runs some usefull queries that provide some insight into user statistics and activities
 
 
-## 5️⃣ Run Queries and Test the System
-
-Execute:
-
-- SQL queries for transactional operations
-- MongoDB queries for logs and document-based records
-
-Test functionalities such as:
-
-- Member registration
-- Loan processing
-- Savings transactions
-- Reporting features
-
----
 
 # 📂 Project Scope
 
